@@ -28,10 +28,7 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
-        //Keep track of the current index position
-        int index = 0;
-
-        while(index < words.size()){
+        for(int index = 0; index < words.size(); index++){
             //Create a TextView with Java
             TextView wordView = new TextView(this);
 
@@ -41,8 +38,6 @@ public class NumbersActivity extends AppCompatActivity {
             //add to rootView
             rootView.addView(wordView);
 
-            //increment the tracker
-            index++;
         }
 
     }
