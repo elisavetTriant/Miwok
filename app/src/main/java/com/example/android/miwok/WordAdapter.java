@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,8 +53,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the {@link Word} object located at this position in the list
         Word currentWord = getItem(position);
 
-        LinearLayout linearLayout = (LinearLayout) listItemView.findViewById(R.id.text_container);
-        linearLayout.setBackgroundResource(mColorResourceId);
+
+        ConstraintLayout constraintLayout = (ConstraintLayout) listItemView.findViewById(R.id.text_container);
+        constraintLayout.setBackgroundResource(mColorResourceId);
 
         // Find the TextView in the list_item.xml layout with the ID miwok_translation_word
         TextView miwokTranslationWordTextView = (TextView) listItemView.findViewById(R.id.miwok_translation_word);
